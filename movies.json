@@ -1,0 +1,27 @@
+[
+    {
+        "pName":"Shutter Island",
+        "pCategory":"Drama",
+        "pCost":"4"
+    },
+    {
+        "pName":"Scary Movie",
+        "pCategory":"Drama",
+        "pCost":"2.5"
+    },
+    {
+        "pName":"Inception",
+        "pCategory":"Satire",
+        "pCost":"4"
+    },
+    {
+        "pName":"Avengers:Infinity War",
+        "pCategory":"Fiction",
+        "pCost":"5"
+    },
+    {
+        "pName":"Pacific Rim",
+        "pCategory":"Fiction",
+        "pCost":"3"
+    }
+]

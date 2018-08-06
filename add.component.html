@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Module Form</h1>
+<form [formGroup]="myform" (ngSubmit)="onSubmit(myform.value)">
+
+  <div class="form-group">
+
+
+   
+
+    <label>Movie Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" class="form-control" formControlName="pName"  required>
+      <label *ngIf="myform.controls['pName'].dirty && !myform.controls['pName'].valid">
+        Movie name is should be alphanumeric!!!<br>
+      </label>
+    <div [hidden]="myform.controls.pName.valid || (!myform.controls.pName.touched && !submitted)">*Movie Name is required!!!
+    </div> <br>
+
+    <br>
+
+    <label>Movie Rating:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="number" class="form-control" formControlName="pCost" required>
+    <label *ngIf="myform.controls['pCost'].dirty && !myform.controls['pCost'].valid">
+       Rating must be a number: eg:1.5. Rating is on Scale 1-5<br>
+      </label>
+    <div [hidden]="myform.controls.pCost.valid || (!myform.controls.pCost.touched && !submitted)">*Movie Rating is required!!!
+    </div>
+    <br>
+    <br>
+    
+
+    <label>Select Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <select formControlName="pCategory">
+      
+      <option *ngFor = "let cat of category" [value]="cat">{{cat}}</option>
+     
+    </select>
+    <div id="x" class="col-sm-10" [hidden]="myform.controls.pCategory.valid || (!myform.controls.pCategory.touched && !submitted)">*Select Genre!!!
+    </div>
+
+   
+
+
+  </div>
+  <br><br>
+  <div class="form-group">
+    <button type="submit">Add Movie!!!</button >
+  </div>
+</form>
